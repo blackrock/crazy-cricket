@@ -1,0 +1,22 @@
+option java_package = "com.bfm.acs.crazycricket";
+option java_outer_classname = "CrazyCricketProtos";
+
+message Game {
+    enum GameType {
+        TEST = 0;
+        LIMITED_OVERS = 1;
+        TWENTY_TWENTY = 2;
+        OTHER = 3;
+    }
+
+    required Player winner = 1;
+    required Player loser = 2;
+    required GameType type = 3;
+    required int64 gameDate = 4;
+
+}
+
+message Player {
+    required string userId = 1;
+    required string country = 2;
+}
